@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-endpath="$HOME/.pw-vim"
+endpath="$HOME/.vim"
 
 warn() {
     echo "$1" >&2
@@ -17,8 +17,6 @@ lnif() {
     fi
 }
 
-echo "Thanks for installing pw-vim"
-
 # Backup existing .vim stuff
 echo "backing up current vim config"
 today=`date +%Y%m%d`
@@ -26,10 +24,8 @@ for i in $HOME/.vim $HOME/.vimrc $HOME/.gvimrc; do [ -e $i ] && [ ! -L $i ] && m
 
 
 if [ ! -e $endpath/.git ]; then
-    echo "cloning pw-vim"
-    git clone --recursive git://github.com/perfectworks/pw-vim.git $endpath
+    git clone --recursive git://github.com/bineon/vim.git $endpath
 else
-    echo "updating pw-vim"
     cd $endpath && git pull
 fi
 
