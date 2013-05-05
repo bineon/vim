@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-endpath="$HOME/.vim"
+endpath="$HOME/.b-vim"
 
 warn() {
     echo "$1" >&2

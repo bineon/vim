@@ -159,16 +159,6 @@
 
 " Key (re)Mappings {
 
-    "The default leader is '\', but many people prefer ',' as it's in a standard
-    "location. To override this behavior and set it back to '\' (or any other
-    "character) add let g:spf13_leader='\' in your .vimrc.bundles.local file
-    if !exists('g:spf13_leader')
-        let mapleader = ','
-        nnoremap \ ,
-    else
-        let mapleader=g:spf13_leader
-    endif
-
     " Yank from the cursor to the end of the line, to be consistent with C and D.
     nnoremap Y y$
 
